@@ -22,5 +22,5 @@ npm run start
 ```
 # under the backend folder
 pip install -r requirements.txt
-python .\api_server.py
+python ./api_server.py
 ```
