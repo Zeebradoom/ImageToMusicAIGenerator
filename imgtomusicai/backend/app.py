@@ -3,6 +3,8 @@ from flask_cors import CORS
 from PIL import Image
 import numpy as np
 import os
+import base64
+import requests
 
 app = Flask(__name__)
 CORS(app)
@@ -35,7 +37,7 @@ def upload_file():
                     ]
                 }
             ],
-            "max_tokens": 300
+            "max_tokens": 2000
         }
 
         # Sending the request to OpenAI API
@@ -44,6 +46,10 @@ def upload_file():
         if response.status_code == 200:
             # Extracting the text from the response
             description_and_lyrics = response.json()['choices'][0]['message']['content']
+            print(response.json())
+            find_start = description_and_lyrics.find('*')
+            if find_start != -1:
+                description_and_lyrics = description_and_lyrics[find_start:]
             return jsonify({'lyrics': description_and_lyrics})
         else:
             return jsonify({'error': 'Error in generating lyrics', 'details': response.text}), 500

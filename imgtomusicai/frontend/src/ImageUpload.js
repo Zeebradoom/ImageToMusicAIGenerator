@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import LyricsDisplay from './LyricsDisplay'; // Make sure to create this component
+import Gallery from './Gallery'; // Make sure to create this component
+
 
 const ImageUpload = () => {
   const [image, setImage] = useState(null);
   const [lyrics, setLyrics] = useState('');
+  const [galleryItems, setGalleryItems] = useState([]);
 
   const handleImageChange = (e) => {
     setImage(e.target.files[0]);
@@ -21,6 +25,14 @@ const ImageUpload = () => {
         }
       });
       setLyrics(response.data.lyrics);
+      setGalleryItems(prevItems => [...prevItems, {
+        imageUrl: URL.createObjectURL(image), // Temporary URL to display the image
+        // lyrics: response.data.lyrics,
+        // // Assume you also get an audio file URL or data from the response
+        // audioSrc: response.data.audioSrc
+        title: 'Title',
+        username: 'Username'
+      }]);
     } catch (error) {
       console.error('Error uploading image:', error);
     }
@@ -32,7 +44,9 @@ const ImageUpload = () => {
         <input type="file" onChange={handleImageChange} accept="image/*" />
         <button type="submit">Generate Lyrics</button>
       </form>
-      {lyrics && <div><h3>Generated Lyrics:</h3><p>{lyrics}</p></div>}
+      {/* {lyrics && <div><h3>Generated Lyrics:</h3><p>{lyrics}</p></div>} */}
+      <LyricsDisplay imageUrl={image && URL.createObjectURL(image)} lyrics={lyrics} />
+      {/* <Gallery items={galleryItems} /> */}
     </div>
   );
 };

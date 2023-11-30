@@ -11,8 +11,10 @@ function App() {
           Edit <code>src/App.js</code> and save to reload.
         </p> */}
         <h1>Image to Lyrics Generator</h1>
-        <ImageUpload />
       </header>
+       <header className="App-header-2">
+      <ImageUpload />
+      </header> 
     </div>
   );
 }
