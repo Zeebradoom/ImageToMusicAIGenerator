@@ -1,15 +1,4 @@
-/* .gallery-container {
-    display: flex;
-    overflow-x: auto;
-    gap: 10px;
-    padding: 10px;
-    scrollbar-width: none; 
-  
-  .gallery-container::-webkit-scrollbar {
-    display: none;
-  } */
 
-  /* Gallery.css */
 .gallery {
     display: flex;
     align-items: center;
