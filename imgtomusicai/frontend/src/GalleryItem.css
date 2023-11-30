@@ -1,0 +1,41 @@
+.gallery-item {
+    width: 200px; /* Adjust width as necessary */
+    height: 250px; /* Adjust height as necessary */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: white;
+    padding: auto;
+    text-align: center;
+  }
+  
+  .gallery-image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .gallery-item-info {
+    padding: 5px;
+  }
+  
+  .gallery-item-title {
+    font-size: 1em;
+    margin: 5px 0;
+  }
+  .gallery-item-username {
+    top: 0; /* Position it at the top */
+    left: 0; /* Align it to the left */
+    width: 100%; /* Full width */
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    color: #333; /* Dark text color */
+    text-align: center; /* Center text */
+    font-weight: bold; /* Bold font */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for the username bar */
+    z-index: 1; /* Ensure it's above the image */
+  }
+    
+  /* .gallery-item-username {
+    font-size: 0.8em;
+    color: #000000;
+  } */

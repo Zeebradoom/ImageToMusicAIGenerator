@@ -1,0 +1,35 @@
+/* .gallery-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    padding: 10px;
+    scrollbar-width: none; 
+  
+  .gallery-container::-webkit-scrollbar {
+    display: none;
+  } */
+
+  /* Gallery.css */
+.gallery {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    gap: 10px;
+  }
+  
+  .gallery::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
+  }
+  
+ 
+  
+  /* Hide scrollbar for Firefox */
+  .gallery {
+    scrollbar-width: none;
+  }
+  
+  /* Hide scrollbar for IE and Edge */
+  .gallery {
+    -ms-overflow-style: none;
+  }

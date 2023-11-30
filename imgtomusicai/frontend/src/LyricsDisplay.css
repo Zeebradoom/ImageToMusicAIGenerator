@@ -1,0 +1,46 @@
+.lyrics-container {
+    width: 100%;
+    display: flex; /* Use flexbox for layout */
+    align-items: center;
+    justify-content: center;
+     /* Space between image and lyrics */
+    padding: 2% 0; 
+  }
+  
+  .image-container-upload {
+    
+    flex-shrink: 0; /* Prevent the image container from shrinking */
+    width: 40%; /* Adjust width as necessary */
+  }
+  
+  .uploaded-image {
+    max-width: 350px; /* Maintain aspect ratio */
+    height: 350px; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: round corners for the image */
+  }
+
+  .uploaded-text {
+    font-size: 1em;
+    /* font-weight: bold; */
+    color: #ffffff;
+    text-align: center;
+  }
+  
+  .lyrics-display {
+    background: #373d4a; /* White background for the lyrics area */
+    border: none; /* Remove border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    font-family: 'Courier New', monospace; /* Monospace font for lyrics to mimic typewriter text */
+    color: rgb(251, 255, 0); /* White text color */
+    font-size: 1rem;
+    line-height: 1.5;
+    /* margin: 20px auto;  */
+    /* padding: 100px; */
+    resize: none; /* Disable resizing */
+    width: 40%;
+    /* max-width: 800px; Max width so it doesn't get too wide on large screens */
+    height: 350px;
+    overflow-y: auto; /* Allow scrolling inside the box */
+  }
+  

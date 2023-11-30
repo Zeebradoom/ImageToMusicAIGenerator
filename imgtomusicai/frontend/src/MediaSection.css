@@ -1,0 +1,32 @@
+.media-section {
+    display: flex; /* Align items horizontally */
+    justify-content: center; /* Center items within the container */
+    align-items: center; /* Align items vertically */
+    gap: 20px; /* Space between the image and video */
+    padding: 1% 0; 
+    /* margin-top: 20px;  */
+  }
+  
+  .media-image-container {
+    flex: 1; /* Allows container to grow and take up equal space */
+  }
+  
+  .media-image {
+    width: 75%; /* Full width of its container */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 500px;
+    border-radius: 10px; /* Optional: rounded corners for the image */
+    padding-left: 10%;
+}
+  
+  .media-video-container {
+    flex: 1; /* Allows container to grow and take up equal space */
+  }
+  
+  .media-video {
+    width: 75%; /* Full width of its container */
+    max-height: 500px;
+    border-radius: 10px; /* Optional: rounded corners for the video */
+    padding-right: 10%;
+}
+  
