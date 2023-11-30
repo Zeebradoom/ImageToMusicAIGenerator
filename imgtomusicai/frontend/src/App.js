@@ -14,7 +14,7 @@ function App() {
       </header>
        <header className="App-header-2">
       <ImageUpload />
-      </header> 
+      </header>
     </div>
   );
 }

@@ -4,6 +4,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 
 # Lanuch
+
+## OpenAI API Key
+
+Add your OpenAI API key to the environment variable `OPENAI_API_KEY` or change the value of `OPENAI_API_KEY` in `./backend/app.py` to your API key. Note that you need to at lease made a successful payment of $1 or more to use the API.
+
 ## Frontend
 
 ```
