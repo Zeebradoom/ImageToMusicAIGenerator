@@ -25,14 +25,7 @@ const ImageUpload = () => {
         }
       });
       setLyrics(response.data.lyrics);
-      setGalleryItems(prevItems => [...prevItems, {
-        imageUrl: URL.createObjectURL(image), // Temporary URL to display the image
-        // lyrics: response.data.lyrics,
-        // // Assume you also get an audio file URL or data from the response
-        // audioSrc: response.data.audioSrc
-        title: 'Title',
-        username: 'Username'
-      }]);
+
     } catch (error) {
       console.error('Error uploading image:', error);
     }
